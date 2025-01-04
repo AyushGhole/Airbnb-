@@ -1,0 +1,122 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+  <body>
+
+    <div id="fliters collapse">
+      <div class="filter collapse">
+        <!-- 1st trending one icons -->
+        <div class="trend mt-4">
+          <div><img src="download.jpg" alt="img" class="img"></div>
+          <p>Trending</p>
+        </div>
+
+        <!-- 2st home one icons -->
+        <div class="trend mt-4 ms-3">
+          <div><img src="home.png" alt="img" class="img"></div>
+          <p>Cabins</p>
+        </div>
+
+        <!-- 3rd islands one icons -->
+        <div class="trend mt-4 ms-3">
+          <div><img src="islands.png" alt="img" class="img"></div>
+          <p>islands</p>
+        </div>
+
+        <!-- 4th city one icons -->
+        <div class="trend mt-4 ms-3">
+          <div><img src="citi.jpg" alt="img" class="img"></div>
+          <p>Iconic City</p>
+        </div>
+
+        <!-- 5th mountain one icons -->
+        <div class="trend mt-4 ms-3">
+          <div><img src="mauntain.png" alt="img" class="img"></div>
+          <p>Iconic City</p>
+        </div>
+
+
+        <!-- 6th castles one icons
+        <div class="trend mt-4 ms-3">
+          <div><img src="castle.png" alt="img" class="img"></div>
+          <p>Castles</p>
+        </div> -->
+
+        <!-- 7th pools one icons -->
+        <div class="trend mt-4 ms-3">
+          <div><img src="polls.png" alt="img" class="img"></div>
+          <p>Swim Pools</p>
+        </div>
+
+
+        <!-- 8th camping one icons -->
+        <div class="trend mt-4 ms-3">
+          <div><img src="camping.jpg" alt="img" class="img"></div>
+          <p>Campings</p>
+        </div>
+
+        <!-- 9th Farm one icons -->
+        <div class="trend mt-4 ms-3">
+          <div><img src="farm.png" alt="img" class="img"></div>
+          <p> Farming</p>
+        </div>
+
+
+        <!-- 10th amazing tools one icons -->
+        <div class="trend mt-4 ms-3">
+          <div><img src="archit.png" alt="img" class="img"></div>
+          <p>Arctics </p>
+        </div>
+
+        <!-- Tax Switchesn -->
+
+        <div class="tax-toogle mt-3" style="margin-left: 12rem;">
+          <div class="form-check-reverse form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Display Taxes</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <h2 class="main_head mt-3 ">ALL LISTINGS</h2> -->
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-4">
+      <% for( list of allListings) { %>
+        <a href="/listing/<%= list._id %>" class="cardAnchor">
+          <div class="card showCard" style="width: 22rem; ">
+            <img src="<%= list.image.url %>" class="card-img-top" alt="listing
+      image">
+            <div class="card-body">
+              <b>
+                <p>
+                  <%= list.title %>, <%= list.country %>
+                </p>
+              </b>
+              <!-- <p class="card-text">
+                <%= list.description %>
+              </p> -->
+              <p class="card-text"> &#8377; <%= list.price.toLocaleString("en-IN") %> / night <i class="tax-info"> +18%
+                    gst included </i></p>
+            </div>
+          </div>
+        </a>
+        <% } %>
+    </div>
+
+    <script>
+      let taxSwitches = document.getElementById("flexSwitchCheckDefault");
+      taxSwitches.addEventListener("click", () => {
+        let tax_info = document.getElementsByClassName("tax-info");
+        for (info of tax_info) {
+          if (info.style.display != "inline") {
+
+            info.style.display = "inline";
+
+          } else {
+            info.style.display = "none";
+          }
+        }
+      });
+
+    </script>

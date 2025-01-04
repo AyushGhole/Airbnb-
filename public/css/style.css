@@ -1,0 +1,255 @@
+* {
+  font-family: "Plus Jakarta Sans", serif !important;
+}
+
+
+.navbar {
+  height: 5rem;
+  background-color: white;
+  width: screen;
+}
+
+.nav-link {
+  color: #222222 !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 0.1rem;
+  opacity: 0.8;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.wonder {
+  font-size: 1.9rem !important;
+  color: #fe424d !important;
+  margin: 0.3rem;
+  margin-bottom: 0.6rem;
+  opacity: 1;
+  margin-left: 2.6rem;
+}
+
+.fa-brands {
+  color: #222222;
+  margin: 3px;
+}
+
+.f-info-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+}
+
+.f-info-socials a {
+  text-decoration: none;
+  color: black;
+  margin: 1rem;
+}
+
+.f-info-socials a:hover {
+  opacity: 0.5;
+}
+
+.title {
+  margin-right: 9rem;
+}
+
+.title:hover {
+  opacity: 0.5;
+}
+
+.showCard {
+  margin: 0.81rem!important;
+  height: 19rem !important;
+  border: none !important ;
+}
+
+.card:hover {
+  opacity: 0.5;
+}
+
+.card-text {
+  padding: 0 !important;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  height: 70%;
+}
+
+.card-body p{
+  margin: 0 !important; 
+  padding:  0 !important;
+}
+
+
+.EditForm {
+  margin: 1rem !important;
+}
+
+.CreateForm {
+  margin: 1rem !important;
+}
+
+.create_head {
+  text-align: center !important;
+}
+
+.cardAnchor {
+  text-decoration: none;
+}
+
+.image{
+  height: 22rem !important; 
+  width: 40rem !important; 
+  /* margin-left: 0.2rem !important; */
+}
+
+.showBtn{
+  display: flex; 
+  justify-content: left; 
+  align-items: center;  
+  margin-top: 2rem;
+}
+
+.Showedit{
+  margin-left: 3rem !important;
+}
+
+.showDiv:hover{
+  opacity: 1;
+}
+
+.showDiv{
+  border: none !important;
+}
+
+.showDiv .card-text{
+  margin-left: 2rem; 
+  font-size: 1.2rem;
+} 
+.showDiv button{
+  margin-left: 2rem;
+}
+.btn:hover{
+  opacity: 0.5 !important;
+}
+
+.reviewBtn{
+ margin: 0 !important;
+}
+.showDiv img{
+  border-radius: 10px !important;
+}
+
+.reviewBtn:hover{
+  opacity: 1 !important;
+}
+
+#comments{
+  border-radius : 5px !important;
+}
+
+.main_head{
+  margin: 0.3rem 2rem !important;
+}
+
+.flashedit{
+  margin: 3rem !important;
+}
+
+.signBtn{
+  margin-left:16rem !important;
+}
+
+.loginBtn{
+  margin-left: 1rem !important;
+}
+.userText{
+  margin-right: 1rem !important; 
+  margin-top: 0.4rem !important;
+  font-size: 1.2rem; 
+  font-family: 'Times New Roman', Times, serif;
+} 
+
+.preview_img{
+ height: 100px !important; 
+ border-radius: 2px !important; 
+}
+
+.reviewCard {
+  margin: 0.5rem !important;
+  padding: 1rem !important; 
+  border-radius: 1rem !important;
+}
+
+.reviewDte{
+  margin:0.71rem !important;
+}
+
+.filter{
+  height: 4rem !important;  
+  margin: 0 !important;
+  width: 100% !important;
+  /* border: 2px solid black !important; */
+  display: flex !important; 
+  justify-content: left !important; 
+  align-items: center !important;
+}
+
+.img{
+  height: 1.9rem !important; 
+  margin-left: 1rem !important;
+  opacity: 0.5 !important;
+}
+.filter p{
+  font-size: 1rem !important; 
+  margin-left: 0.6rem !important;
+}
+
+.trend:hover{
+  border-bottom: 0.21rem solid black !important;
+  opacity: 0.9 !important;
+  cursor: pointer;
+}
+
+.tax-info{
+  display: none !important;
+}
+
+.tax-view{
+  display: visible !important;
+}
+.tax-toogle{
+  border: 1px solid black !important; 
+  border-radius: 1rem !important ; 
+  padding: 1rem !important;
+
+}
+.instagram{
+  height: 1.2rem !important;
+  width: 1.2rem !important;
+} 
+.twitter{
+  height: 1.5rem !important;
+}
+.linkedIn{
+  height: 1.1rem !important;
+}
+.navsearch{
+  border: 1px solid grey !important; 
+  border-radius: 1rem !important; 
+  height: 2.5rem !important; 
+  text-decoration: none !important; 
+  padding: 1rem;  
+  width: 21rem !important;
+  margin-left: 10rem !important;
+  box-shadow:1px 1px 1px 1px #222222;
+}
+
+.text:hover {
+  cursor: pointer; 
+}

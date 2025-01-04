@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="nav-link wonder" href="/listing">Wonderlust</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+      
+      <a class="nav-link text" href="/listing">Explore</a>
+      <a class="nav-link text" href="/listing/new">Add listing</a>  
+      </div>  
+            
+      
+      <div class="navbar-nav "  style="margin-left: 4rem;">  
+        <input type="text" placeholder="search" class="navsearch">
+        </div>  
+          
+       
+        <div class="navbar-nav ms-auto"> 
+          <% if(!currUser) { %>
+            <form action="/signup">
+           <button class="btn btn-outline-danger signBtn"><b> Signup </b> </button>
+          </form> 
+          <form action="/login">
+            <button class="btn btn-outline-danger loginBtn"> <b>login </b> </button> 
+           </form>
+             <% } %>
+          <% if(currUser) { %> 
+             <span class="userText"> 
+           <small> @<%= currUser.username %> </small> 
+             </span > 
+             <form action="/logout"> 
+              <button class="btn btn-outline-danger ms-auto">LogOut</button>
+             </form>
+           <% }  %> 
+        </div>
+    </div>
+  </div>
+</nav>

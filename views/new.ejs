@@ -1,0 +1,66 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+  <body>
+    <h3 class="CreateForm create_head">Create New Listing</h3>
+
+    <div class="row">
+      <div class="col-7 offset-2">
+        <form method="POST" action="/listing" class="CreateForm" enctype="multipart/form-data">
+          <!-- Title Field  -->
+          <div>
+            <label for="title" class="form-label">Title :</label>
+            <input name="title" placeholder="Add a catchy title" type="text" required class="form-control" />
+          </div>
+          <br>
+          <!-- Description Field  -->
+          <div>
+            <label for="description" class="form-label">Description : </label>
+            <textarea name="description" placeholder="Enter the description" class="form-control"></textarea>
+          </div>
+          <br>
+
+          <!-- Image Field -->
+          <!-- <div>
+            <label for="image" class="form-label"> Image Link : </label>
+            <input name="image" placeholder="Enter the image url" type="text" class="form-control" required />
+          </div>
+          <br> -->
+          
+          <!-- Image field with file options --> 
+          <div>
+            <label for="image" class="form-label">Upload Image File : </label>
+            <input name="image" type="file" class="form-control" required />
+          </div>
+          <br>
+
+          <div class="row">
+
+            <!-- Price Field -->
+            <div class="col-md-4">
+              <label for="price" class="form-label"> Price : </label>
+              <input name="price" placeholder="1200" type="number" required class="form-control" required />
+            </div>
+            <br>
+
+            <!-- Country Field  -->
+            <div class="col-md-8">
+              <label for="country" class="form-label"> Country : </label>
+              <input name="country" placeholder="India" type="text" class="form-control" required />
+            </div>
+            <br>
+          </div>
+
+          <!-- Location Field -->
+          <div>
+            <label for="location" class="form-label">Location :</label>
+            <input name="location" placeholder="Udaipur, Mumbai" type="text" class="form-control" required />
+          </div>
+          <br>
+
+          <!-- Add field -->
+          <button class="btn btn-danger">ADD</button>
+          <br><br>
+        </form>
+      </div>
+    </div>
+  </body>
