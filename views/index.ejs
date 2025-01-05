@@ -103,20 +103,16 @@
         </a>
         <% } %>
     </div>
-
     <script>
-      let taxSwitches = document.getElementById("flexSwitchCheckDefault");
-      taxSwitches.addEventListener("click", () => {
-        let tax_info = document.getElementsByClassName("tax-info");
-        for (info of tax_info) {
-          if (info.style.display != "inline") {
-
+      let taxSwitch = document.getElementById('flexSwitchCheckDefault');
+      taxSwitch.addEventListener('click', () => {
+        let taxInfo = document.querySelectorAll('.tax-info');
+        taxInfo.forEach((info) => {
+          if (info.style.display === "none" || info.style.display === "") {
             info.style.display = "inline";
-
           } else {
             info.style.display = "none";
           }
-        }
+        });
       });
-
     </script>
