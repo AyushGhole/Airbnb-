@@ -23,8 +23,8 @@ module.exports.reviewRoute = async (req, res) => {
 //Delete Route
 module.exports.deleteRoute = async (req, res) => {
   let { id, reviewId } = req.params;
-  console.log(id);
-  console.log(reviewId);
+  console.log("id : ", id);
+  console.log("review : ", reviewId);
 
   await Listing.findByIdAndUpdate(id, { $pull: { reviews: reviewId } });
   await Review.findByIdAndDelete(reviewId);
