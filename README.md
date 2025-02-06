@@ -1,4 +1,4 @@
-<b>Descritption : </b> <hr>
+<b>Descritption : </b> 
 Wanderlust Web is a dynamic and user-friendly travel accommodation platform, similar to Airbnb, designed for explorers seeking unique stays and memorable experiences. Whether you're looking for cozy cabins, luxurious villas, or budget-friendly apartments, Wanderlust Web connects travelers with verified hosts worldwide. With an intuitive search interface, secure booking system, and personalized recommendations, users can effortlessly find the perfect stay. The platform also offers features like guest reviews, seamless communication with hosts, and flexible payment options, ensuring a hassle-free travel experience. Whether planning a weekend getaway or a long-term stay, Wanderlust Web transforms travel dreams into reality.
 <hr>
 <br>
@@ -19,10 +19,6 @@ Wanderlust Web is a travel accommodation platform built using the MERN stack (Mo
 <br>
 <b>Create Lisitng  Page : </b> <br>
 <img src="public/create.png" alt="create"> 
-<hr>
-<br>
-<b>Edit Listing Page : </b> <br>
-<img src="public/edit.png" alt="Edit"> 
 <hr>
 <br>
 <b>Challenges  : </b> 
