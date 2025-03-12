@@ -75,8 +75,15 @@ State Management & Component Optimization
 <span><img src="https://camo.githubusercontent.com/f93e05694a6f01f2f6a37713a454a942442a5ff2b33083891096a6f7e57842f8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656163742d2532333230323332612e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d7265616374266c6f676f436f6c6f723d253233363144414642"></span>
 <span><img src="https://camo.githubusercontent.com/fd00f5fb76a02f6093a50142c52193fa6353f4a1b5199827c57cbe99d611b532/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e504d2d2532334342333833372e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d6e706d266c6f676f436f6c6f723d7768697465"></span>
 <br>
-<b>Links for the Website : </b> <br>
-Deployed : <b>"https://wonderlust-in.onrender.com/listing"</b> <br>
-You Tube : <b>"https://youtu.be/QUu4Kn83EOY"</b>
-
-
+<h3>Deployed Project Link : </h3>
+<br>
+<br>
+  <a href="https://wonderlust-in.onrender.com/listing">
+         <img src="https://img.shields.io/badge/-Website_Link-blue?style=flat-square" height="30px" width="90px" >
+   </a>
+   <br>
+   <h4>Demo Link : </h4> 
+   <br>
+    <a href="https://youtu.be/QUu4Kn83EOY">
+         <img src="https://img.shields.io/badge/-Website_Link-blue?style=flat-square" height="30px" width="90px" >
+   </a> 
