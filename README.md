@@ -85,5 +85,5 @@ State Management & Component Optimization
    <h4>Demo Link : </h4> 
    <br>
     <a href="https://youtu.be/QUu4Kn83EOY">
-         <img src="https://img.shields.io/badge/-Website_Link-blue?style=flat-square" height="30px" width="90px" >
+         <img src="https://img.shields.io/badge/-Demo_Link-blue?style=flat-square" height="30px" width="90px" >
    </a> 
