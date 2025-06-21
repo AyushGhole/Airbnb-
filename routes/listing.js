@@ -8,6 +8,7 @@ const upload = multer({ storage });
 
 // Declaring from the Controllers
 const listingControllers = require("../controllers/listing.js");
+const paymentController = require("../controllers/payment.js");
 
 // New route: Display form for new listing
 router.get("/new", isLoggedIn, listingControllers.renderNewRoute);
@@ -45,5 +46,11 @@ router.get("/:id/edit", isLoggedIn, isOwner, listingControllers.editRoute);
 
 //Delete Route
 // router.delete("/:id", isLoggedIn, isOwner, listingControllers.deleteRoute);
+
+// POST: Book a listing
+router.post("/:id/book", isLoggedIn, listingControllers.bookListing);
+
+// payment /Checkout
+router.get("/payment/checkout", paymentController.renderCheckoutPage);
 
 module.exports = router;

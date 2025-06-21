@@ -1,4 +1,6 @@
 const Listing = require("../models/listing");
+const Booking = require("../models/booking");
+const stripe = require("../utils/stripe");
 
 // Declaring from the Controllers
 module.exports.index = async (req, res) => {
@@ -69,4 +71,36 @@ module.exports.deleteRoute = async (req, res) => {
   let deleteRoute = await Listing.findByIdAndDelete(id);
   console.log(deleteRoute);
   res.redirect("/listing");
+};
+
+// Stripe Booking
+module.exports.bookListing = async (req, res) => {
+  const { id } = req.params;
+  const { bookingDate } = req.body;
+
+  const listing = await Listing.findById(id);
+  const amountInPaise = listing.price * 100;
+
+  // Create Stripe payment intent
+  const paymentIntent = await stripe.paymentIntents.create({
+    amount: amountInPaise,
+    currency: "inr",
+    metadata: { listingId: id },
+  });
+
+  // Save the booking in the DB
+  const booking = new Booking({
+    listing: id,
+    user: req.user._id,
+    bookingDate,
+    price: listing.price,
+    paymentIntentId: paymentIntent.id,
+  });
+
+  await booking.save();
+
+  // Redirect to frontend payment page (could be EJS or React)
+  res.redirect(
+    `/payment/checkout?clientSecret=${paymentIntent.client_secret}&listingId=${listing._id}`
+  );
 };

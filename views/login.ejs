@@ -1,26 +1,41 @@
 <% layout("/layouts/boilerplate.ejs") %>
 
+  <!-- Ensure this is in your layout <head> if not already included -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
 
-  <div class="row mt-3">
-    <div class="col-8 offset-2">
-      <h2>Login</h2>
-      <hr>
-      <form action="/login" method="POST" class="needs-validation" novalidate>
-        <!-- Title Field  -->
-        <div class="mb-3">
-          <label for="username" class="form-label">Username :</label>
-          <input name="username" id="username " placeholder="ayush_ghole" type="text" required class="form-control" />
+  <body class="bg-light ">
+    <div class="container">
+      <div class="row justify-content-center py-4 ">
+        <!-- Animated Login Card -->
+        <div class="col-md-6 col-lg-5 shadow p-5 rounded-4 bg-white animate__animated animate__fadeInUp">
 
+          <!-- Animated Heading -->
+          <h2 class="text-center mb-4 fw-bold text-primary animate__animated animate__fadeInDown">Login</h2>
+          <hr class="mb-4">
+
+          <form action="/login" method="POST" class="needs-validation" novalidate>
+
+            <!-- Username Field -->
+            <div class="mb-4">
+              <label for="username" class="form-label fw-semibold">Username</label>
+              <input name="username" id="username" placeholder="ayush_ghole" type="text"
+                class="form-control form-control-lg shadow-sm border border-secondary-subtle" required />
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-4">
+              <label for="password" class="form-label fw-semibold">Password</label>
+              <input name="password" id="password" placeholder="abc@123" type="password"
+                class="form-control form-control-lg shadow-sm border border-secondary-subtle" required />
+            </div>
+
+            <!-- Login Button -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-success btn-lg shadow-sm rounded-pill">Login</button>
+            </div>
+
+          </form>
         </div>
-        <br>
-
-        <!-- Passsword Field -->
-        <div class="mb-3">
-          <label for="password" class="form-label">Password : </label>
-          <input name="password" id="password" placeholder="abc@123" type="password" class="form-control" required />
-        </div>
-        <br>
-        <button class="btn btn-success mb-2">login</button>
-      </form>
+      </div>
     </div>
-  </div>
+  </body>

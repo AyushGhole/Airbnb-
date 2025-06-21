@@ -1,32 +1,51 @@
 <% layout("/layouts/boilerplate.ejs") %>
 
+  <!-- Make sure this is in your boilerplate layout's <head> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
 
-  <div class="row mt-3">
-    <div class="col-8 offset-2">
-      <h2>SignUp on Wonderlust</h2>
-      <hr>
-      <form action="/signup" method="POST" class="needs-validation" novalidate>
-        <!-- Title Field  -->
-        <div class="mb-3">
-          <label for="username" class="form-label">Username :</label>
-          <input name="username" id="username " placeholder="ayush_ghole" type="text" required class="form-control" />
-          <div class="valid-feedback">Looks good</div>
-        </div>
-        <br>
+  <body class="bg-light ">
+    <div class="container">
+      <div class="row 
+       py-5 justify-content-center">
+        <!-- Animated Signup Card -->
+        <div class="col-md-6 col-lg-5 shadow p-5 rounded-4 bg-white animate__animated animate__fadeInUp">
 
-        <!-- Email Field -->
-        <div class="mb-3">
-          <label for="email" class="form-label">Email : </label>
-          <input name="email" id="email" placeholder="abc@gmail.com" type="email" class="form-control" required />
+          <!-- Animated Heading -->
+          <h2 class="text-center mb-4 fw-bold text-primary animate__animated animate__fadeInDown">Sign Up on Wonderlust
+          </h2>
+          <hr class="mb-4">
+
+          <form action="/signup" method="POST" class="needs-validation" novalidate>
+
+            <!-- Username Field -->
+            <div class="mb-4">
+              <label for="username" class="form-label fw-semibold">Username</label>
+              <input name="username" id="username" placeholder="ayush_ghole" type="text"
+                class="form-control form-control-lg shadow-sm border border-secondary-subtle" required />
+              <div class="valid-feedback">Looks good</div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-4">
+              <label for="email" class="form-label fw-semibold">Email</label>
+              <input name="email" id="email" placeholder="abc@gmail.com" type="email"
+                class="form-control form-control-lg shadow-sm border border-secondary-subtle" required />
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-4">
+              <label for="password" class="form-label fw-semibold">Password</label>
+              <input name="password" id="password" placeholder="abc@123" type="password"
+                class="form-control form-control-lg shadow-sm border border-secondary-subtle" required />
+            </div>
+
+            <!-- Signup Button -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-success btn-lg shadow-sm rounded-pill">Signup</button>
+            </div>
+
+          </form>
         </div>
-        <br>
-        <!-- Passsword Field -->
-        <div class="mb-3">
-          <label for="password" class="form-label">Password : </label>
-          <input name="password" id="password" placeholder="abc@123" type="password" class="form-control" required />
-        </div>
-        <br>
-        <button class="btn btn-success mb-2">Signup</button>
-      </form>
+      </div>
     </div>
-  </div>
+  </body>

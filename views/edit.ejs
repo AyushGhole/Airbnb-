@@ -1,67 +1,74 @@
 <% layout("/layouts/boilerplate.ejs") %>
 
-  <body>
-    <h3 class="CreateForm create_head">Edit Listing</h3>
-    <form method="POST" action="/listing/<%= listing._id %>?_method=PUT" class="EditForm" enctype="multipart/form-data">
-      <div class="row">
-        <div class="col-7 offset-2">
-          <!-- Title Edit Field  -->
-          <div>
-            <label for="title" class="form-label">Title :</label>
-            <input name="title" value="<%= listing.title %>" type="text" required class="form-control" />
-            <br>
+  <!-- Ensure this is included in your boilerplate layout inside <head> -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+
+  <body class="bg-light py-5">
+    <div class="container">
+      <!-- Animated Heading -->
+      <h3 class="text-center mb-5 fw-bold text-dark animate__animated animate__fadeInDown">Edit Listing</h3>
+
+      <form method="POST" action="/listing/<%= listing._id %>?_method=PUT"
+        class="shadow-lg p-5 bg-white rounded-4 animate__animated animate__fadeInUp" enctype="multipart/form-data">
+
+        <div class="row mb-4">
+          <!-- Title -->
+          <div class="col-md-12 mb-3">
+            <label for="title" class="form-label fw-semibold">Title</label>
+            <input name="title" value="<%= listing.title %>" type="text" required
+              class="form-control form-control-lg shadow-sm border border-secondary-subtle" />
           </div>
-          <!-- Description Edit field -->
-          <div>
-            <label for="description" class="form-label">Description : </label>
-            <textarea name="description" class="form-control"><%= listing.description %></textarea>
-            <br>
 
-          </div> 
-
-          <!-- Image preview --> 
-           <div class="mb-3">
-              Original Image : <br>
-              <img src="<%= listing.image.url %>" alt="uploaded_image" class="preview_img"> 
-           </div>
-
-
-          <!-- Image Edit field -->
-            <div>
-            <label for="image" class="form-label">Upload Image File : </label>
-            <input name="image" type="file" class="form-control" required />
+          <!-- Description -->
+          <div class="col-md-12 mb-4">
+            <label for="description" class="form-label fw-semibold">Description</label>
+            <textarea name="description" rows="4"
+              class="form-control form-control-lg shadow-sm border border-secondary-subtle"><%= listing.description %></textarea>
           </div>
-          <br>
 
-          <div class="row">
-            <!-- Price edit field -->
-            <div class="col-md-4">
-              <label for="price" class="form-label"> Price : </label>
-              <input name="price" value="<%= listing.price %>" type="number" required class="form-control" required />
+          <!-- Current Image -->
+          <div class="col-md-12 mb-4">
+            <label class="form-label fw-semibold">Original Image</label>
+            <div class="border p-2 rounded bg-light d-flex justify-content-center">
+              <img src="<%= listing.image.url %>" alt="uploaded_image" class="img-fluid rounded-3 shadow-sm"
+                style="max-height: 200px;" />
             </div>
-            <br>
-            <!-- Country Edit field -->
-            <div class="col-md-8">
-              <label for="country" class="form-label"> Country : </label>
-              <input name="country" value="<%= listing.country %>" type="text" class="form-control" required />
-            </div>
-            <br>
           </div>
 
-
-
-
-          <!-- location edit field -->
-          <div>
-            <label for="location" class="form-label">Location :</label>
-            <input name="location" value="<%= listing.location %>" type="text" class="form-control " />
-            <br>
+          <!-- Image Upload -->
+          <div class="col-md-12 mb-4">
+            <label for="image" class="form-label fw-semibold">Upload New Image</label>
+            <input name="image" type="file"
+              class="form-control form-control-lg shadow-sm border border-secondary-subtle" required />
           </div>
 
+          <!-- Price -->
+          <div class="col-md-4 mb-4">
+            <label for="price" class="form-label fw-semibold">Price</label>
+            <input name="price" value="<%= listing.price %>" type="number" required
+              class="form-control form-control-lg shadow-sm border border-secondary-subtle" />
+          </div>
 
-          <!-- Edit button -->
-          <button class="btn btn-danger">Edit</button>
-    </form>
-    </div>
+          <!-- Country -->
+          <div class="col-md-8 mb-4">
+            <label for="country" class="form-label fw-semibold">Country</label>
+            <input name="country" value="<%= listing.country %>" type="text"
+              class="form-control form-control-lg shadow-sm border border-secondary-subtle" required />
+          </div>
+
+          <!-- Location -->
+          <div class="col-md-12 mb-4">
+            <label for="location" class="form-label fw-semibold">Location</label>
+            <input name="location" value="<%= listing.location %>" type="text"
+              class="form-control form-control-lg shadow-sm border border-secondary-subtle" />
+          </div>
+
+          <!-- Submit Button -->
+          <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-danger px-5 py-2 fs-5 rounded-pill shadow-sm">Update Listing</button>
+          </div>
+        </div>
+
+      </form>
     </div>
   </body>

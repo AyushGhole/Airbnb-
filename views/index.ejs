@@ -1,118 +1,111 @@
 <% layout("/layouts/boilerplate.ejs") %>
 
-  <body>
+  <!-- Ensure this is included in your <head> section -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
 
-    <div id="fliters collapse">
-      <div class="filter collapse">
-        <!-- 1st trending one icons -->
-        <div class="trend mt-4">
-          <div><img src="download.jpg" alt="img" class="img"></div>
-          <p>Trending</p>
+  <body class="bg-light ">
+
+    <!-- Filter Section with Animation -->
+    <div id="filters" class="animate__animated animate__fadeInLeft">
+      <div class="filter collapse container mb-5">
+
+        <!-- Filter Icons Row -->
+        <div class="d-flex  mt-5 flex-wrap justify-content-center gap-4">
+
+          <!-- Filter Item -->
+          <div class="trend text-center">
+            <div><img src="download.jpg" alt="img" class="img"></div>
+            <p class="mt-2">Trending</p>
+          </div>
+
+          <div class="trend text-center">
+            <div><img src="home.png" alt="img" class="img"></div>
+            <p class="mt-2">Cabins</p>
+          </div>
+
+          <div class="trend text-center">
+            <div><img src="islands.png" alt="img" class="img"></div>
+            <p class="mt-2">Islands</p>
+          </div>
+
+          <div class="trend text-center">
+            <div><img src="citi.jpg" alt="img" class="img"></div>
+            <p class="mt-2">Iconic City</p>
+          </div>
+
+          <div class="trend text-center">
+            <div><img src="mauntain.png" alt="img" class="img"></div>
+            <p class="mt-2">Iconic City</p>
+          </div>
+
+          <div class="trend text-center">
+            <div><img src="polls.png" alt="img" class="img"></div>
+            <p class="mt-2">Swim Pools</p>
+          </div>
+
+          <div class="trend text-center">
+            <div><img src="camping.jpg" alt="img" class="img"></div>
+            <p class="mt-2">Campings</p>
+          </div>
+
+          <div class="trend text-center">
+            <div><img src="farm.png" alt="img" class="img"></div>
+            <p class="mt-2">Farming</p>
+          </div>
+
+          <div class="trend text-center">
+            <div><img src="archit.png" alt="img" class="img"></div>
+            <p class="mt-2">Arctics</p>
+          </div>
         </div>
 
-        <!-- 2st home one icons -->
-        <div class="trend mt-4 ms-3">
-          <div><img src="home.png" alt="img" class="img"></div>
-          <p>Cabins</p>
-        </div>
-
-        <!-- 3rd islands one icons -->
-        <div class="trend mt-4 ms-3">
-          <div><img src="islands.png" alt="img" class="img"></div>
-          <p>islands</p>
-        </div>
-
-        <!-- 4th city one icons -->
-        <div class="trend mt-4 ms-3">
-          <div><img src="citi.jpg" alt="img" class="img"></div>
-          <p>Iconic City</p>
-        </div>
-
-        <!-- 5th mountain one icons -->
-        <div class="trend mt-4 ms-3">
-          <div><img src="mauntain.png" alt="img" class="img"></div>
-          <p>Iconic City</p>
-        </div>
-
-
-        <!-- 6th castles one icons
-        <div class="trend mt-4 ms-3">
-          <div><img src="castle.png" alt="img" class="img"></div>
-          <p>Castles</p>
-        </div> -->
-
-        <!-- 7th pools one icons -->
-        <div class="trend mt-4 ms-3">
-          <div><img src="polls.png" alt="img" class="img"></div>
-          <p>Swim Pools</p>
-        </div>
-
-
-        <!-- 8th camping one icons -->
-        <div class="trend mt-4 ms-3">
-          <div><img src="camping.jpg" alt="img" class="img"></div>
-          <p>Campings</p>
-        </div>
-
-        <!-- 9th Farm one icons -->
-        <div class="trend mt-4 ms-3">
-          <div><img src="farm.png" alt="img" class="img"></div>
-          <p> Farming</p>
-        </div>
-
-
-        <!-- 10th amazing tools one icons -->
-        <div class="trend mt-4 ms-3">
-          <div><img src="archit.png" alt="img" class="img"></div>
-          <p>Arctics </p>
-        </div>
-
-        <!-- Tax Switchesn -->
-
-        <div class="tax-toogle mt-3" style="margin-left: 12rem;">
-          <div class="form-check-reverse form-switch">
+        <!-- Tax Switch Toggle -->
+        <div class="d-flex justify-content-center mt-4 ms-5">
+          <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
             <label class="form-check-label" for="flexSwitchCheckDefault">Display Taxes</label>
           </div>
         </div>
+
       </div>
     </div>
 
+    <!-- Listings Section with Animation -->
+    <div class="container">
+      <div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 g-4 animate__animated animate__fadeInUp">
 
-    <!-- <h2 class="main_head mt-3 ">ALL LISTINGS</h2> -->
-
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-4">
-      <% for( list of allListings) { %>
-        <a href="/listing/<%= list._id %>" class="cardAnchor">
-          <div class="card showCard" style="width: 22rem; ">
-            <img src="<%= list.image.url %>" class="card-img-top" alt="listing
-      image">
-            <div class="card-body">
-              <b>
-                <p>
-                  <%= list.title %>, <%= list.country %>
-                </p>
-              </b>
-              <!-- <p class="card-text">
-                <%= list.description %>
-              </p> -->
-              <p class="card-text"> &#8377; <%= list.price.toLocaleString("en-IN") %> / night <i class="tax-info"> +18%
-                    gst included </i></p>
-            </div>
+        <% for(let list of allListings) { %>
+          <div class="col">
+            <a href="/listing/<%= list._id %>" class="cardAnchor text-decoration-none text-dark">
+              <div class="card showCard shadow-sm rounded-4 overflow-hidden" style="width: 100%;">
+                <img src="<%= list.image.url %>" class="card-img-top" alt="listing image">
+                <div class="card-body">
+                  <b>
+                    <p class="card-title mb-1">
+                      <%= list.title %>, <%= list.country %>
+                    </p>
+                  </b>
+                  <p class="card-text mb-0">
+                    &#8377; <%= list.price.toLocaleString("en-IN") %> / night
+                      <i class="tax-info text-muted"> +18% GST included </i>
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
-        </a>
-        <% } %>
+          <% } %>
+
+      </div>
     </div>
+
     <script>
       let taxSwitch = document.getElementById('flexSwitchCheckDefault');
       taxSwitch.addEventListener('click', () => {
         let taxInfo = document.querySelectorAll('.tax-info');
         taxInfo.forEach((info) => {
-          if (info.style.display === "none" || info.style.display === "") {
-            info.style.display = "inline";
-          } else {
-            info.style.display = "none";
-          }
+          info.style.display = (info.style.display === "none" || info.style.display === "") ? "inline" : "none";
         });
       });
     </script>
+
+  </body>
